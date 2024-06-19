@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback System</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<h1 align="center">Feedback System</h1>
+<h4>Overall Ratings</h4>
+<div>
+    <label for="oneStar">*</label>
+    <input type="number" name="oneStar" value="0" id="oneStar" readonly><br>
+    <label for="twoStar">**</label>
+    <input type="number" name="twoStar" value="0" id="twoStar" readonly><br>
+    <label for="threeStar">***</label>
+    <input type="number" name="threeStar" value="0" id="threeStar" readonly><br>
+    <label for="fourStar">****</label>
+    <input type="number" name="fourStar" value="0" id="fourStar" readonly><br>
+    <label for="fiveStar">*****</label>
+    <input type="number" name="fiveStar" value="0" id="fiveStar" readonly><br>
+</div>
+<br><br>
+<form onsubmit="handleFormSubmit(event)">
+    <h4>Feedback Form</h4>
+    Enter Your Name:
+    <input type="text" id="name" name="name" required>
+    Choose Rating:
+    <select name="select" id="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <button type="submit">SUBMIT</button>
+</form>
+<h4>All Feedbacks</h4>
+<ul id="listOfFeedbacks"></ul>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
